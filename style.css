@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    max-width:100%;
+}
+
+body {
+  
+    background: radial-gradient(circle at center, #f8f9f6 , #a2aa83)
+    
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:gray;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px whitesmoke;
+}
+a{
+    text-decoration: none;
+    color: grey;
+    font-size: larger;
+}
+p{
+    color: grey;
+    
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+} 
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+    
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+
+}
+.btn{
+    display: inline-block;
+    background-color: coral;
+    color: #f8f9f6;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: 2s;
+    
+}
+.btn:hover{
+    background: #e63605;
+    color: #f8f9f6;
+
+}
