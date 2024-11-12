@@ -117,6 +117,7 @@ p{
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
+    transition: 1s;
 }
 
 
@@ -140,4 +141,7 @@ p{
 }
 .rating .fa{
     color: orange;
+}
+.col-4:hover{
+    transform: translateY(-20px);
 }
