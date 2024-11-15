@@ -17,7 +17,7 @@ body{
 .navbar{
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
 }
 
 nav {
@@ -51,8 +51,22 @@ a{
 }
 p{
     color: grey;
-    
+
 }
+.offline-message {
+    background-color: #ff4d4d;  
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    display: block; 
+}
+
 .container{
     max-width: 1300px;
     margin: auto;
@@ -72,7 +86,9 @@ p{
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
-    
+    border-radius: 10%;
+     
+
 }
 .col-2 h1{
     font-size: 50px;
@@ -107,7 +123,7 @@ p{
     margin-bottom: 30px;
 }
 .col-3 img{
-    width: 100%;
+    width: 90%;
 }
 .small-container{
     max-width: 1080;
@@ -148,18 +164,20 @@ p{
 .col-4:hover{
     transform: translateY(-20px);
 }
+footer img {
+    width: 30px;
+    height: 20px;
+    padding: 0px;
+    float: right;
+}
 .footer{
     background: #000;
     color: #8a8a8a;
-    font-size: 14px;
-    padding: 60px 0 20px;
+    font-size: 20px;
+    padding: 70px 0 30px;
 }
 
-@media only screen and (max-width: 800px){
-
-    h1{
-        font-size: 36px;
-        line-height: 50px;
  
-    }
-}
+
+
+
