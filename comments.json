@@ -1,0 +1,16 @@
+{
+    "comments": [
+        {
+            "productId": 1,
+            "author": "John",
+            "comment":"This jacket is great!Perfect for hiking."
+        },
+        {
+            "productId":1,
+            "author":"Emma",
+            "comment": "Good product, I bought it for my husband, he is very satisfied."
+        }
+    ]
+}
+
+

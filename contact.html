@@ -3,74 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Form Validation</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="contact.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Hiking & Outdoor Store</title>
-    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
 </head>
 <body>
-
-     <div class="container">
-       <div class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo2.png" width="125px"></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div> 
-      </div>
-      <noscript>
-        <div class="offline-message">
-            <p>You are offline. Please check your internet connection.</p>
+  <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo2.png" width="125px"></a>
         </div>
-    </noscript>
-     <main>
-          <div class="form">
-            <h1>Contact Us</h1>
-            <p>If you have a question, feel free to ask.</p>
-            <form id="form-list">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Surname"><br>
-                <input type="email" placeholder="email@email.com" class="formaemail"><br>
-                <textarea name="comment" id="message" cols="46" rows="10" placeholder="Write a message..."></textarea><br>
-                <button id="btn-form">Send</button>
-            </form>
-          </div>
-      </main>
-    <!--bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<noscript>
+    <div class="offline-message">
+        <p>You are offline. Please check your internet connection.</p>
+    </div>
+</noscript>
+    <h1>Become parth of the team</h1>
+    <form id="contactForm">
+        <label for="name">Name and surname:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-    <footer>
-       <div style="text-align: center; padding: 20px; background-color: #333; color: white;">
-          <p>&copy; 2024 Cours:Foundations of Web Development  | Author: Enis Merdžanović</p>
-          <p>Follow me:</p>
-          <ul style="list-style-type: none; padding: 0;">
-            <li style="display: inline; margin-right: 15px;">
-              <a href="https://www.instagram.com/merdzanovic.e/?next=%2F" style="color: white; text-decoration: none;">Instagram</a>
-            </li>
-            <li style="display: inline; margin-right: 15px;">
-              <a href="https://www.facebook.com/enis.merdzanovic.5/about/" style="color: white; text-decoration: none;">Facebook</a>
-            </li>
-            <li style="display: inline; margin-right: 15px;">
-              <a href="https://x.com/?lang=en" style="color: white; text-decoration: none;">X</a>
-            </li>
-            <li style="display: inline; margin-right: 15px;">
-              <a href="https://www.youtube.com/" style="color: white; text-decoration: none;">YouTube</a>
-            </li>
-          </ul>
-          <div class="col-md-4">
-            <a href="#"><img src="img/top.png" alt=""></a>
-          </div>
-       </div>
-        
-    </footer>
+        <label for="email">Email address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required>
+        <div class="password-strength"></div><br><br>
+
+        <label for="dob">Date of birth:</label><br>
+        <input type="text" id="dob" name="dob" required><br><br>
+
+        <button type="submit">Send</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#dob").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1900:2024",
+                dateFormat: "dd-mm-yy"
+            });
+            $("#password").on("input", function () {
+                const password = $(this).val();
+                const strength = zxcvbn(password).score; 
+                const messages = ["Very weak", "Weak", "Good", "Strong", "Very strong"];
+                const color = ["red", "orange", "yellow", "lightgreen", "green"];
+                $(".password-strength").text(messages[strength]).css("color", color[strength]);
+            });
+
+            $("#contactForm").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 8
+                    },
+                    dob: {
+                        required: true,
+                        date: true
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "The name is required.",
+                        minlength: "The name must contain at least 2 characters."
+                    },
+                    email: {
+                        required: "Email is required.",
+                        email: "Please enter a valid email address."
+                    },
+                    password: {
+                        required: "Password is required.",
+                        minlength: "The password must contain at least 8 characters."
+                    },
+                    dob: {
+                        required: "Date of birthy is required.",
+                        date: "Please enter a valid date."
+                    }
+                },
+                submitHandler: function (form) {
+                    alert("Forma je uspešno poslata!");
+                    form.reset(); 
+                }
+            });
+        });
+    </script>
+     <footer>
+      <div style="text-align: center; padding: 20px; background-color: #333; color: white;">
+        <p>&copy; 2024 Cours:Foundations of Web Development  | Author: Enis Merdžanović</p>
+        <p>Follow me:</p>
+        <ul style="list-style-type: none; padding: 0;">
+          <li style="display: inline; margin-right: 15px;">
+            <a href="https://www.instagram.com/merdzanovic.e/?next=%2F" style="color: white; text-decoration: none;">Instagram</a>
+          </li>
+          <li style="display: inline; margin-right: 15px;">
+            <a href="https://www.facebook.com/enis.merdzanovic.5/about/" style="color: white; text-decoration: none;">Facebook</a>
+          </li>
+          <li style="display: inline; margin-right: 15px;">
+            <a href="https://x.com/?lang=en" style="color: white; text-decoration: none;">X</a>
+          </li>
+          <li style="display: inline; margin-right: 15px;">
+            <a href="https://www.youtube.com/" style="color: white; text-decoration: none;">YouTube</a>
+          </li>
+        </ul>
+        <div class="col-md-4">
+          <a href="#"><img src="img/top.png" alt=""></a>
+        </div>
+  
+      </div>
+
+  </footer>
 </body>
 </html>

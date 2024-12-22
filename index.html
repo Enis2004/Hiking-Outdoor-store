@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
 
     <title>Hiking & Outdoor Store</title>
     <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
@@ -25,9 +26,18 @@
                     <li><a href="products.html">Products</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="onlywithus.html">Only with us</a></li>
                 </ul>
             </nav>
     </div>
+    </div class="theme-switcher-container">
+    <button onclick="changeTheme('light')">Light Theme</button>
+    <button onclick="changeTheme('dark')">Dark Theme</button>
+    <button onclick="changeFontSize('small')">Small Font</button>
+    <button onclick="changeFontSize('medium')">Medium Font</button>
+    <button onclick="changeFontSize('large')">Large Font</button>
+    </div>
+
     <noscript>
         <div class="offline-message">
             <p>You are offline. Please check your internet connection.</p>
@@ -79,10 +89,11 @@
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$75</p>
+                <a href="https://mymaine.org/gearandprep/howtochooseahikingbackpack" class="view-more-btn">View More</a>
             </div>
             <div class="col-4">
                 <img src="img/travelbag.avif" >
-                <h4>Trekking Carry Bag - 40 L to 60 L</h4>
+                <h4>Trekking Carry Bag - 40 L to 60</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -91,6 +102,7 @@
                     <i class="fa fa-star"></i>
                 </div>
                 <p>$66</p>
+                <a href="https://indiahikes.com/blog/carrying-a-trekking-backpack-made-easy" class="view-more-btn">View More</a>
             </div>
             <div class="col-4">
                 <img src="img/minibag2.avif" >
@@ -103,6 +115,7 @@
                     <i class="fa fa-star-half-o"></i>
                 </div>
                 <p>$53</p>
+                <a href="https://road.cc/content/review/altura-heritage-bar-bag-284123" class="view-more-btn">View More</a>
             </div>
             
 
@@ -110,6 +123,7 @@
 
     </div>
     
+
     <footer>
         <div style="text-align: center; padding: 20px; background-color: #333; color: white;">
           <p>&copy; 2024 Cours:Foundations of Web Development  | Author: Enis Merdžanović</p>

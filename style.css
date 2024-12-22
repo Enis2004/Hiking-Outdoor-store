@@ -176,8 +176,46 @@ footer img {
     font-size: 20px;
     padding: 70px 0 30px;
 }
+body{
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.theme-switcher-container{
+    text-align: center;
+    margin-top: 20px;
+}
 
- 
-
-
-
+body.dark-theme{
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+}
+body.small-font{
+    font-size: 12px;
+}
+body.medium-font{
+    font-size: 16px;
+}
+body.large-font{
+    font-size: 20px
+}
+button { background-color: #4CAF50; 
+     color: white; 
+     padding: 10px 20px; 
+     font-size: 14px; 
+     cursor: pointer;  
+     border: none; 
+     border-radius: 5px; 
+     margin: 5px; 
+     display: inline-flex; 
+     align-items: center; 
+     justify-content: center; 
+     transition: background-color 0.3s, transform 0.3s; 
+    }  
+    button:hover { 
+        background-color: #45a049; 
+        transform: translateY(-2px);
+    }
+    
