@@ -1,5 +1,45 @@
+<<<<<<< HEAD:HTML/about.html
 <div class="container">
    
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="about.js" defer></script>
+
+    <title>Hiking & Outdoor Store</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+</head>
+<body>
+   <div class="header">
+        <div class="container">
+            <div class="navbar">
+             <div class="logo">
+                <a href="index.html"><img src="img/logo2.png" width="125px"></a>
+                </div>
+                  <nav>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                 </ul>
+                 </nav>
+            </div>
+       </div>
+   </div>
+   <noscript>
+    <div class="offline-message">
+        <p>You are offline. Please check your internet connection.</p>
+    </div>
+</noscript>
+
+>>>>>>> 1e89961b927153fa07e96446b3afd4f9c6c8489a:about.html
    <section class="bg-light p-3">
     <h3 class="pb-2">Attached is a table with our best-selling items</h3>
 
@@ -55,51 +95,26 @@
 </div>
 </section>
 
-<h2>Please fill out the form</h2>
-<form action="https://jsonplaceholder.typicode.com/posts" method="POST">
-    <label for="fullName">Full Name:</label>
-         <input type="text" id="fullName" name="fullName" required placeholder="your name" pattern="[A-Za-z]+" title="Only letters and spaces are allowed.">
-        <br><br>
-    <label for="email">Email:</label>
-         <input type="email" id="email" name="email" required placeholder="your email">
-        <br><br>
-    <label for="password">Password:</label>
-         <input type="password" id="password" name="password" required minlength="8" placeholder="strong password">
-         <br><br>
-    <label for="phone">Phone:</label>
-         <input type="tel" id="pone" name="phone" pattern="^\d{10}$" placeholder="phone number (10 digits)" required>
-    <br><br>
-    <label for="age">Age:</label>
-          <input type="age" id="age" name="age" min="18" max="100" required placeholder="your age">
-        <br><br>
-    <label for="dob">Date of birthd:</label>
-         <input type="date" id="dob" name="dob" required>
-        <br><br>
-    <label>Gender:</label>
-        <input type="radio" id="male" name="gender" value="Male" required> Male
-        <input type="radio" id="female" name="gender" value="Female" required> Female
-        <br><br>
-    <label for="subscribe">Subscribe to Newsletter:</label>
-        <input type="checkbox" id="subscribe" name="subscribe" value="Yes">
-       <br><br>
-       <label for="country">Country:</label>
-       <select id="country" name="country" required>
-        <option value="">Select your country</option>
-        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-        <option value="USA">USA</option>
-        <option value="Croatia">Croatia</option>
-        <option value="Germany">Germany</option>
-        <option value="Serbia">Serbia</option>
-        <option value="France">France</option>
-        <option value="Norwey">Norwey</option>
-    </select>
-    <br><br>
-    <label for="profilePicture">Upload Profile Picture:</label>
-        <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
-        <br><br>
-    <button type="submit">Submit</button>
+<section>
+    <h2>Leave a Comment</h2>
+    <form id="commentForm" method="POST">
+        <label for="commentName">Name:</label>
+        <input type="text" id="commentName" name="commentName" required placeholder="Your name">
 
+<<<<<<< HEAD:HTML/about.html
 </form>
+=======
+        <label for="commentText">Comment:</label>
+        <textarea id="commentText" name="commentText" required placeholder="Your comment" rows="4"></textarea>
+        <button type="submit">Submit Comment</button>
+    </form>
+    <div id="commentsList">
+        
+    </div>
+</section>
+</body>
+</html>
+>>>>>>> 1e89961b927153fa07e96446b3afd4f9c6c8489a:about.html
 <section class="accordion-section"> 
     <h3 class="pb-2">Frequently Asked Questions</h3> 
     <div class="accordion-container"> 
@@ -122,4 +137,31 @@
      </div> 
     </section>
 
+<<<<<<< HEAD:HTML/about.html
 </div>
+=======
+<footer>
+    <div style="text-align: center; padding: 20px; background-color: #333; color: white;">
+      <p>&copy; 2024 Cours:Foundations of Web Development  | Author: Enis Merdžanović</p>
+      <p>Follow me:</p>
+      <ul style="list-style-type: none; padding: 0;">
+        <li style="display: inline; margin-right: 15px;">
+          <a href="https://www.instagram.com/merdzanovic.e/?next=%2F" style="color: white; text-decoration: none;">Instagram</a>
+        </li>
+        <li style="display: inline; margin-right: 15px;">
+          <a href="https://www.facebook.com/enis.merdzanovic.5/about/" style="color: white; text-decoration: none;">Facebook</a>
+        </li>
+        <li style="display: inline; margin-right: 15px;">
+          <a href="https://x.com/?lang=en" style="color: white; text-decoration: none;">X</a>
+        </li>
+        <li style="display: inline; margin-right: 15px;">
+          <a href="https://www.youtube.com/" style="color: white; text-decoration: none;">YouTube</a>
+        </li>
+      </ul>
+    </div>
+    
+</footer>
+  
+</body>
+</html>
+>>>>>>> 1e89961b927153fa07e96446b3afd4f9c6c8489a:about.html
