@@ -85,11 +85,11 @@ select:focus{
     justify-content: space-between;
 }
 .image-container {
-    width: 23%; 
+    width: 20%; 
     text-align: center; 
 }
 .image-container img {
-    width: 100%; 
+    width: 50%; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px olive;
@@ -180,7 +180,10 @@ footer p {
 .back-to-top img:hover {
     transform: scale(1.1); 
 }
-
+.active {
+    font-weight: bold;
+    color: rgba(52, 52, 51, 0.763); 
+}
 
 @media (max-width: 768px) {
     .social-links {
